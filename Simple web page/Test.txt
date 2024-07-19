@@ -1,0 +1,16 @@
+TEST 1 B2 ANSWER
+
+ANS 1. 
+     HTML stands for HyperText Markup Language and is an essential element in building websites HTML is a mark up language which supports browser.
+ANS 2. features of HTML :
+         1.Structure Tags like Html tag, head tag, nav tag h1 to h6 tag.
+         2.Hypertext and and Links
+         3.Forms and Input
+         4. CSS Integration feature
+         5.Multimedia Integration
+         6. Responsive Design
+         7.List,Tables ,Semantic Elements
+
+ANS 3.Multipurpose Internet Mail Extentions taking care of transferring different kind of Data through electronic mail services
+
+ANS4: Empty or void elements are HTML elements that don't require a closing tag because they contain no content.
