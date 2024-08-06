@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         p::first-line{
+              color: blue;
+         }
+
+         h1::first-letter{
+               color: red;
+         }
+
+         h2::before{
+            content: url("../Images/tournament-3529744_1280.jpg");
+            width: 200px!important;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+       <p>first-line</p>
+       <h1>first-letter</h1>
+       <h2>Before pseudo</h2>
+</body>
+</html>

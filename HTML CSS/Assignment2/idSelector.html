@@ -6,25 +6,29 @@
     <title>tagSelector</title>
 
     <style>
+        :root{
+             --color:red;
+             --background-color: yellowgreen;
+        }
          #h1{
-             color:blue;
-             background-color: aqua;
-         }
-
-         #para1{
-            color: brown;
-            background-color: aquamarine;
+             color:var(--color);
+             background-color: var(--background-color);
          }
 
          #para2{
-             color:blueviolet;
-             background-color: bisque;
+            color:var(--color);
+             background-color: var(--background-color);
+         }
+
+         h2{
+            color:var(--color);
+            background-color: var(--background-color);
          }
     </style>
 </head>
 <body>
       <h1 id="h1">This is id Selector web page</h1>
-      <p id="para1">This is my website</p>
+      <h2 id="para1">This is my website</h2>
       <p id="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi magni eligendi accusantium obcaecati corporis delectus sapiente eveniet quam, dignissimos nihil similique impedit officia voluptates ducimus animi explicabo cupiditate incidunt eius!</p>      
 </body>
 </html>

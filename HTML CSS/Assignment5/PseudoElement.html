@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+             color: blue;
+        }
+
+        h1::first-letter{
+              color: red;
+        }
+
+        .before{
+            font-size: 34px;
+        }
+
+        .before::before{
+           background-image: url("../Images/tournament-3529744_1280.jpg");
+           display: inline-block;
+           width: 100px; 
+          height: 50px;
+         
+          content: " ";
+       }
+       .after{
+        font-size: 34px;
+        margin-top: 20px;
+       }
+       .after::after{
+        background-image: url("../Images/tournament-3529744_1280.jpg");
+           display: inline-block;
+           width: 100px; 
+          height: 50px;
+          content: " ";
+       }
+   </style>
+</head>
+<body>
+    <div style="margin: auto; width: 600px;">
+    <p style="font-size: 30px;">first-line</p>
+    <h1>first-letter</h1>
+    <div class="before">Before pseudo</div>
+    <div class="after">After pseudo</div>
+</div>
+</body>
+</html>
