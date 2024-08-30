@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Carousel with Custom Controls</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <style>
+        .orbit-image {
+            width: 100%;
+        }
+        .custom-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .custom-controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .custom-controls button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+        <ul class="orbit-container">
+            <li class="orbit-slide">
+                <img class="orbit-image" src="https://via.placeholder.com/1200x600.png?text=Slide+1" alt="Slide 1">
+            </li>
+            <li class="orbit-slide">
+                <img class="orbit-image" src="https://via.placeholder.com/1200x600.png?text=Slide+2" alt="Slide 2">
+            </li>
+            <li class="orbit-slide">
+                <img class="orbit-image" src="https://via.placeholder.com/1200x600.png?text=Slide+3" alt="Slide 3">
+            </li>
+        </ul>
+        <nav class="orbit-bullets">
+            <button class="is-active" data-slide="0"></button>
+            <button data-slide="1"></button>
+            <button data-slide="2"></button>
+        </nav>
+        <div class="custom-controls">
+            <button class="orbit-prev">‹</button>
+            <button class="orbit-next">›</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <script>
+         $(document).foundation();
+
+        $(document).ready(function() {
+           
+            // Custom navigation
+            $('.orbit-prev').on('click', function() {
+                $('.orbit').foundation('prev');
+            });
+
+            $('.orbit-next').on('click', function() {
+                $('.orbit').foundation('next');
+            });
+        });
+    </script>
+</body>
+</html>
