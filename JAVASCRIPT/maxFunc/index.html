@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+              var arr=[199, 67, 89];
+
+              function findMax(arr){
+
+                  var max=0;
+                  for(var i=0; i<arr.length; i++){
+                       if(arr[i]>max){
+                          max=arr[i]
+                       }
+                  }
+                  return max;
+              }
+
+              document.write(findMax(arr))
+       </script>
+</body>
+</html>

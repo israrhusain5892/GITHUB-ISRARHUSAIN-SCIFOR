@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch statement</title>
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff6347; /* Tomato color */
+            text-align: center;
+            margin-top: 20%;
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+         <script>
+              var marks=prompt("enter your marks");
+
+              switch(marks){
+
+                  case '100':
+                    document.write(`<h1 style="color:green; text-align:center; font-size:100px;">Excellent !! You achieve your goal</h1>`);
+                    break;
+                 case '80':
+                    document.write(`<h1 style="color:green; text-align:center; font-size:100px;">very good</h1>`);
+                    break;
+
+                 case '70':
+                   document.write(`<h1 style="color:green; text-align:center; font-size:60px;">Average</h1>`);
+                    break;
+
+                default:
+                document.write(`<h1 style="color:green; text-align:center; font-size:60px;">unknown result</h1>`);
+              }
+         </script>
+</body>
+</html>

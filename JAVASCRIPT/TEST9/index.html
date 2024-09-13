@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="margin: auto; width:400px; margin-top: 40px; box-shadow: 0px 0px 8px rgba(0,0,0,0.5); padding: 20px;">
+        <input type="number" placeholder="Enter value of a" style="margin: auto; padding: 8px;" class="a" value="">
+        <input type="number" placeholder="Enter value of b" style="padding: 8px;" class="b">
+        <button style="padding:8px; background-color: aqua; border:none;" value='plus'>ADD</button>
+        <button style="padding:8px; background-color: aqua; border:none;" value="sub">SUBTRACT</button>
+        <button style="padding:8px; background-color: aqua; border:none;" value="mul">MULTIPLY</button>
+        <button style="padding:8px; background-color: aqua; border:none;" value="div">DIVISION</button>
+    </div>
+    <script>
+        var a = document.querySelector('.a').value;
+        var b = document.querySelector('.b').value;
+        console.log(a)
+        var btn = document.querySelectorAll('button');
+        btn.forEach(button => {
+            button.addEventListener('click', (e) => {
+                console.log(doOperation(e.target.value));
+                
+            })
+        })
+       
+        var result = 0;
+        function doOperation(operator) {
+           
+            switch (operator) {
+
+                case 'plus':
+                    result = a + b;
+                    break;
+                case 'sub':
+                    result=a-b;
+                    break;
+
+                case 'mul':
+                    result=a*b;
+                    break;
+                case 'div':
+                    result=a/b;
+                    break;
+                default:
+                    document.write("some thing error")
+            }
+            return result;
+        }
+
+
+        // 2 write a function takes an argument and return its square
+           function square(number){
+                return number*number;
+           }
+           document.write(square(12));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+            //   global scoped variables 
+                var a=34;
+
+                function f3(b){
+                      return (a+b);
+                }
+                document.write("Global function output "+f3(45)+"<br>");
+
+                // local scoped variables
+
+                function local(){
+                       var b=23;
+                       document.write("Local function scoped "+ (a+b));
+                }
+                
+                local();
+                document.write(b);
+                console.log(b);
+       </script>
+</body>
+</html>
