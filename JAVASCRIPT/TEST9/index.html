@@ -5,31 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+          button{
+              border-radius: 5px;
+          }
+    </style>
 </head>
 
-<body>
-    <div style="margin: auto; width:400px; margin-top: 40px; box-shadow: 0px 0px 8px rgba(0,0,0,0.5); padding: 20px;">
-        <input type="number" placeholder="Enter value of a" style="margin: auto; padding: 8px;" class="a" value="">
-        <input type="number" placeholder="Enter value of b" style="padding: 8px;" class="b">
-        <button style="padding:8px; background-color: aqua; border:none;" value='plus'>ADD</button>
-        <button style="padding:8px; background-color: aqua; border:none;" value="sub">SUBTRACT</button>
-        <button style="padding:8px; background-color: aqua; border:none;" value="mul">MULTIPLY</button>
-        <button style="padding:8px; background-color: aqua; border:none;" value="div">DIVISION</button>
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">Calculator</h1>
+    <div class="container" style="margin: auto; height: 300px; width:400px; margin-top: 40px; box-shadow: 0px 0px 8px rgba(0,0,0,0.5); padding: 20px;">
+        <input type="number" placeholder="Enter value of a" style="margin: auto; width:80%; padding: 8px; display: block;" class="a" >
+        <input type="number" placeholder="Enter value of b" style="padding: 8px; width: 80%; display: block; margin: auto; margin-top: 10px;" class="b">
+        <div style="margin: auto; margin-top: 20px; width: 300px;">
+            
+        <button style="padding:8px; background-color: rgb(68, 0, 255); color: white; border:none;" value='plus'>ADD</button>
+        <button style="padding:8px; background-color: rgb(255, 0, 140); border:none; color: white;" value="sub">SUBTRACT</button>
+        <button style="padding:8px; background-color: rgb(0, 255, 98); border:none; color: white;" value="mul">MULTIPLY</button>
+        <button style="padding:8px; background-color: rgb(0, 174, 255); border:none; color: white;" value="div">DIVISION</button>
+        </div>
+        <h3 style="text-align: center; margin-top: 30px; font-size: 20px;"></h3>
     </div>
     <script>
-        var a = document.querySelector('.a').value;
-        var b = document.querySelector('.b').value;
-        console.log(a)
+       
+        // console.log(a)
         var btn = document.querySelectorAll('button');
         btn.forEach(button => {
+           
             button.addEventListener('click', (e) => {
-                console.log(doOperation(e.target.value));
+                var a = parseFloat(document.querySelector('.a').value);
+                var b = parseFloat(document.querySelector('.b').value);
+                let res=doOperation(e.target.value,a,b)
+                let con=document.querySelector('.container')
+                let h4=document.querySelector('h3')
+                 h4.innerText="Result: "+res
+               
+             
+                console.log(doOperation(e.target.value,a,b));
                 
             })
         })
        
-        var result = 0;
-        function doOperation(operator) {
+        var result;
+        function doOperation(operator,a,b) {
            
             switch (operator) {
 
