@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div id="xml"></div>
+      <button style="padding: 12px;" onclick="f1()">fetch</button>
+       <script>
+          function f1(){
+             var request=new XMLHttpRequest();
+            //  request.open("GET","index.html");
+            request.open("GET","https://jsonplaceholder.typicode.com/todos/1",true);
+             request.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    console.log(this.responseText);
+                    document.getElementById("xml").innerHTML=this.responseText;
+                }
+                console.log("State: " + this.readyState + " Status: " + this.status);
+
+             }
+            
+             request.send();
+            }
+       </script>
+</body>
+</html>
