@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .social a {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            font-size: 20px;
+            border: 2px solid cyan;
+            color: cyan;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+
+        }
+
+        .social a:hover {
+            /* box-shadow: 0px 0px 16px cyan; */
+            background: cyan;
+            color: #000;
+        }
+    </style>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Portfolio.</h1>
+
+            <ul class="nav-links">
+                <li style="--i:1" ><a class="active"  value="home" href="index.html">Home</a></li>
+                <li style="--i:2"><a  class="contact" value="contact" href="https://github.com/">Contact</a></li>
+                <li style="--i:3"><a  class="about" value="about" href="#about-me"  >About</a></li>
+                <li style="--i:4"><a class="skill" value="skill" href="#skill">Skills</a></li>
+                <li style="--i:5" ><a class="project" value="project" href="#">Projects</a></li>
+                <li style="--i:6"><a class="service" value="service" href="#services">Services</a></li>
+                <button class="download-btn">Download CV</button>
+            </ul>
+            <button>Download CV</button>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-container">
+                <div class="text">
+                          <h3 style="padding: 0px; margin: -10px; margin-left: 3px; line-height: 0%;">Hello, it's Me<h3>
+
+                            <h1 style=" font-size: 38px; font-weight: 600; padding: 0px; margin: 0px;">Israr Husain</h1>
+
+                            <h3 style="padding: 0px; margin:2px;"> And I'm a <span class="dev-text"
+                                    style="color: cyan;"></span> </h3>
+                            <p>I'm a Software Engineer who completed my Engineering degree from Rajshree Institute of
+                                Management
+                                And Technology, Bareilly, Uttar Pradesh. I chose to study computer science because I am
+                                fascinated by how computers work and spend most of my spare time designing programs and
+                                web
+                                pages. I enjoy problem solving and logical thinking...</p>
+
+                            <div class="social"
+                                style="display: flex; justify-content: flex-start;align-items: center; gap:10px;">
+
+                                <a style="--i:7" href="#"> <i class="bx bxl-facebook text-cyan"></i></a>
+                                <a style="--i:8" href="#"><i class="bx bxl-linkedin text-cyan"></i></a>
+                                <a style="--i:9" href="#"><i class="bx bxl-github text-cyan"></i></a>
+                                <a style="--i:10" href="#"><i class="bx bxl-twitter text-cyan"></i></a>
+                            </div>
+                            <div class="text-btn">
+                                <button>More About Me</button>
+                            </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-outlier">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="about-me" class="about" style=" position: relative;">
+            <h1 style="color: white; text-align: center; font-size: 34px;">About <span style="color:cyan">Me</span></h1>
+            <div class="about-container">
+                <div class="about-photo-container">
+                    <div class="about-photo">
+                        <!-- <img src="./Images/photo.jpg"/> -->
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h1>Full Stack <span style="color: cyan;">Developer!</span></h1>
+                    <p>
+                        I'm a Motivated and skilled full stack developer with 6 months of
+                        experience in top product-based companies. Dedicated to delivering
+                        high- quality projects with user delight and optimizing performance.
+                        Seeking a challenging role in a dynamic organization where I can
+                        utilize my expertise in web development, JavaScript, and frontend
+                        technologies to create innovative and scalable solutions.
+                        I have learnt web development from Accio job bootcamp where I learnt about the DSA Java Backend
+                        Spring boot and learned front-end technologies like HTML, CSS, JavaScript, and React Js.
+
+                        I have also done some internships at Hulkhire where I worked on a live project involving payment
+                        integration in Spring Boot. I gained a lot of experience and know how to work with a team.</p>
+                    <div class="about-btn">
+                        <button>More About Me</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1 style="text-align: center; font-size:34px;color:white; margin-top: 100px;">My <span style="color:cyan">Services</span></h1>
+        <section id="services">
+          
+            <div class="service-container">
+                <div class="service-card" style="--i:1">
+                    <i class='bx bxl-html5'></i>
+                    <i class='bx bxl-css3'></i>
+                    <i class='bx bxl-bootstrap'></i>
+                    <i class='bx bxl-javascript'></i>
+                    <i class='bx bxl-react'></i>
+                    <h1>Web Development</h1>
+                    <p>I provide service of front-end technologies in HTML, CSS, JavaScript, and React JS. I have worked
+                        on different front-end projects like creating clones of popular websites.</p>
+                    <div style="  display: flex; justify-content: center; disalign-content: center;"><button
+                            style="align-content: center;">More About</button></div>
+                </div>
+                <div class="service-card" style="--i:2">
+                    <i class='bx bxl-java'></i>
+                    <i class='bx bxl-spring-boot'></i>
+                    <i class='bx bxl-mongodb'></i>
+                    <i class='bx bxl-mysql'></i>
+                    <i class='bx bx-data'></i>
+                    <i class='bx bxl-aws'></i>
+                    <h1>Backend Development</h1>
+                    <p>I have experience with backend technologies like Spring Boot, Hibernate, MySQL, JPA, and Lombok.
+                        Projects include movie booking systems and e-commerce applications.</p>
+                    <div style="  display: flex; justify-content: center; disalign-content: center;"><button
+                            style="align-content: center;">More About</button></div>
+                </div>
+
+                <div class="service-card" id="card"  style="--i:3">
+                    <i class='bx bxl-nodejs'></i>
+                    <i class='bx bxl-react'></i>
+                    <i class='bx bxl-mongodb'></i>
+                    <i class='bx bxl-javascript'></i>
+                    <h1>Mern Stack Development</h1>
+                    <p>I have experience with backend technologies like Node js, express Js, MySQL, MongoDB. Projects
+                        include online Book Store. I also work on a mern project Book store.</p>
+                    <div style="  display: flex; justify-content: center; disalign-content: center;"><button
+                            style="align-content: center;">More About</button></div>
+                </div>
+
+            </div>
+        </section>
+       <h1 style="text-align: center; margin-top: 100px; font-size: 34px; color: white;">My <span style="color:cyan">Skills</span></h1>
+        <section id="skill">
+            <div class="skill-container">
+                <div class="text-skill">
+                      <img src="./Images/virtual.png">
+                      <h1>I love these technologies</h1>
+                      <p>I am a software engineer, and when it comes to my experience and creative skills, I initially struggled but found motivation to excel. With the support of my teachers, I have developed skills in DSA, Java, Spring Boot, and front-end technologies like HTML, CSS, JavaScript, and React JS.</p>
+                </div>
+                <div class="skill-sub">
+                  
+                    <div style="--i:1"><i class='bx bxl-html5'></i> <div>HTML</div></div>
+                    <div style="--i:2"><i class='bx bxl-css3'></i> <div>CSS</div></div>
+                    <div style="--i:3"><i class='bx bxl-css3'></i> <div>TAILWIND</div></div>
+                    <div style="--i:1"><i class='bx bxl-bootstrap'></i> <div>BOOTSTRAP</div></div>
+                    <div style="--i:2"><i class='bx bxl-javascript'></i> <div>JAVASCRIPT</div></div>
+                    <div style="--i:3"><i class='bx bxl-react'></i> <div>REACTJS</div></div>
+                    <div style="--i:4"><i class='bx bxl-nodejs'></i> <div>NODEJS</div></div>
+                    <div style="--i:5"><i class='bx bxl-mongodb'></i> <div>MONGODB</div></div>
+                    <div style="--i:6"><i class='bx bxl-java'></i> <div>CORE JAVA</div></div>
+                    <div style="--i:7"><i class='bx bxl-j2e'></i> <div>J2EE</div></div>
+                    <div style="--i:8"><i class='bx bxl-spring-boot'></i> <div>HIBERNATE(ORM)</div></div>
+                    <div style="--i:9"><i class='bx bxl-spring-boot'></i> <div>SPRINGBOOT</div></div>
+                    <div style="--i:10"><div>JPA</div></div>
+                    <div style="--i:11"><i class='bx bx-data'></i> <div>MYSQL</div></div>
+                    <div style="--i:12"><i class='bx bx-data'></i> <div>POSTGRESQL</div></div>
+                    <div style="--i:13"> <div>COLLECTIONS</div></div>
+                    <div style="--i:14"> <div>MAVEN</div></div>
+                    <div style="--i:15"> <div>SWAGGER</div></div>
+                    <div style="--i:16"> <div>TOMCAT</div></div>
+                    <div style="--i:17"> <div>DSA</div></div>
+                    <div style="--i:18"><i class='bx bxl-github'></i> <div>GIT</div></div>
+                    <div style="--i:19"><i class='bx bxl-github'></i> <div>GITHUB</div></div>
+                    <div style="--i:20"> <div>RESTFUL API</div></div>
+                    <div style="--i:21"> <div>LOMBOK</div></div>
+                       
+                     
+                </div>
+            </div>
+        </section>
+        <h1 style="text-align: center; margin-top: 100px; font-size: 34px; color: white;">My Recent <span style="color:cyan">Projects</span></h1>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

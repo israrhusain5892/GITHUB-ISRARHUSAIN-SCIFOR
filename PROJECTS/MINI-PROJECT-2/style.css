@@ -1,0 +1,598 @@
+* {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #081C29;
+    /* box-sizing: border-box; */
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #04112C;
+    background: #04112C;
+    color: white;
+
+}
+
+header nav ul {
+
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 20px;
+
+
+}
+
+.logo{
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+header nav ul li {
+    text-decoration: none;
+    list-style: none;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+   
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    color: white;
+    font-weight: 500;
+   
+}
+
+
+
+
+header nav ul li a:hover {
+
+    color: cyan;
+
+}
+
+
+
+.download-btn {
+    display: none;
+}
+
+nav button {
+    background: cyan;
+    border-radius: 23px;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+nav button:hover {
+    box-shadow: 0px 0px 10px cyan;
+}
+
+.banner {
+   
+    padding: 10px;
+ 
+   
+}
+
+.banner-container {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    margin-top: 40px;
+    
+}
+
+.banner-container .text {
+    /* width: 50%; */
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    width: calc(80% - 300px);
+    text-align: left;
+
+}
+
+.photo {
+
+    width: 300px;
+    height: 300px;
+    animation: slideLeft 1s ease forwards;
+
+}
+
+.photo-outlier {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-left: 8px solid cyan;
+    border-right: 8px solid cyan;
+    border-bottom: 8px solid blueviolet;
+    border-top: 8px solid blueviolet;
+    box-shadow: 5px 0px 50px cyan,
+        -5px 0px 50px cyan, 1px 5px 40px rgb(127, 3, 243),
+        0px -5px 40px rgb(108, 7, 202);
+
+    background-image: url('./Images/photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.text-btn{
+    margin-top: 18px;
+}
+
+.social a{
+    opacity: 0;
+    animation: slideLeft  1s ease forwards;
+    
+    animation-delay:calc(0.2s*var(--i));
+}
+.text-btn button{
+     padding:10px 15px 10px 15px;
+     background: cyan;
+     font-size: 15px;
+     border-radius: 28px;
+     border: none;
+     font-weight: 500;
+     opacity: 0;
+     animation: slideTop 1s ease forwards;
+     animation-delay: 2s;
+}
+
+.text-btn button:hover{
+    box-shadow: 0px 0px 10px cyan,0px 0px 25px cyan, 0px 0px 50px cyan;
+}
+
+.text h3{
+    font-size: 20px;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.text h1{
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.text p{
+
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+
+/* About me section css */
+
+#about-me{
+      margin-top: 100px;
+}
+
+.about-container{
+     width:80%;
+     margin: auto;
+     display: flex;
+     flex-wrap:wrap-reverse;
+     justify-content: center;
+     align-items:center;
+    
+     gap:10rem;
+}
+
+.about-photo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    opacity: 0;
+    transition: 0.3s;
+    animation: slideRight 1s ease forwards;
+}
+.about-container .about-photo{
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-left: 8px solid cyan;
+    border-right: 8px solid cyan;
+    border-bottom: 8px solid blueviolet;
+    border-top: 8px solid blueviolet;
+    box-shadow: 5px 0px 50px cyan;
+        
+    background-image: url('./Images/photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.about-btn button{
+    padding:10px 15px 10px 15px;
+    background: cyan;
+    font-size: 15px;
+    border-radius: 28px;
+    border: none;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.about-btn button:hover{
+    box-shadow: 0px 0px 10px cyan,0px 0px 25px cyan, 0px 0px 50px cyan;
+}
+
+.about-text{
+      
+      width:55%;
+      color: white;
+      opacity: 0;
+    transition: 0.3s;
+    animation: slideLeft 1s ease forwards;
+}
+
+
+
+/* serice css */
+
+#services{
+    margin-top: 100px;
+}
+
+.service-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:30px;
+}
+
+.service-container .service-card{
+    width:330px;
+    border-radius: 6px;
+    color:white;
+    text-align: left;
+    border: none;
+    padding: 16px;
+    box-shadow: 0px 0px 20px blue;
+    transition: transform 0.3s ease-in-out, opacity 1s ease;
+    transform: translateX(10px); 
+    /* opacity: 0;
+    animation: slideLeft 1s ease forwards; 
+    animation-delay: calc(0.3s*var(--i));
+   */
+}
+
+.service-card i{
+     font-size: 34px;
+     color:cyan;
+}
+
+ .service-card:hover{
+    transform: scale(1.08) !important; /* Combine translation and scale */
+    transition: 1s !important;
+    cursor: pointer;
+
+ }
+
+
+ .service-card div button{
+
+    padding: 10px;
+    background: cyan;
+    border-radius: 24px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.service-card div button:hover{
+     box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan , 0px 0px 20px cyan;
+}
+
+#skill{
+    margin-top: 70px;
+}
+.skill-container{
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+
+}
+
+.skill-sub{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 10px; 
+    width:50%;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.skill-sub div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    min-width: 200;
+    padding: 5px;
+    border-radius: 25px;
+    background: cyan;
+    box-shadow: 0px 0px 10px cyan;
+    text-align: center;
+    transition: 0.3s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.05s*var(--i));
+
+
+}
+.skill-sub div i{
+
+    color: black;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.skill-sub div:hover{
+   
+  
+    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan,0px 0px 50px cyan;
+    cursor: pointer;
+   
+    transition: 0.3s;
+
+}
+
+.text-skill{
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    width: 450px;
+    color: white;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.text-skill img{
+
+    width:150px;
+    display:block;
+
+}
+
+
+
+
+@media (max-width:768px) {
+    nav {
+        width: 100%;
+    }
+
+   header nav ul {
+        /* display: none; */
+        flex-direction: column;
+
+        width: 100%;
+        position: absolute;
+        top: 54px;
+        left: 0px;
+        gap: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        z-index: 10;
+        /* height: 100vh; */
+        transition: 1s;
+        opacity: 0;
+
+    }
+
+    header nav ul li a {
+        color: black;
+    }
+
+    .download-btn {
+        display: flex;
+        width: 120px;
+    }
+
+    header nav button {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav-links.active{
+
+        /* transform: translateY(0); */
+        /* display: flex;  */
+        /* transition: 1s; */
+        opacity: 1;
+        transition: 1s;
+        
+    }
+
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        margin-right: 10px;
+    }
+
+
+    .banner-container .text{
+        width: 100%;
+    }
+
+    .banner-container .photo .photo-outlier{
+          width: 200px;
+          height: 200px;
+          margin: auto;
+    }
+
+    .banner-container{
+        gap:28px;
+    }
+
+    .text-btn{
+        margin:20px auto;
+    }
+
+     .about-container{
+        width: 100%;
+        margin-top: 10px;
+        gap:10px;
+     }
+    .about-container .about-photo-container{
+           width:100%;
+           
+    }
+
+    .about-container .about-photo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-container .about-text{
+        width: 80%;
+    }
+
+    #about-me{
+        margin-top: -50px;
+    }
+
+    #services{
+
+        padding: 20px;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .skill-sub{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 4 equal-width columns */
+        /* gap: 10px;  */
+        width:100%;
+        /* margin: auto; */
+        padding: 5px;
+        
+       
+    }
+
+    .skill-sub div{
+
+        width: 170px;
+        padding: 5px;
+    }
+
+}
+
+@keyframes slideTop{
+
+    0%{
+       transform: translateY(100px);
+       opacity: 0;
+    }
+
+    100%{
+       transform: translateY(0px);
+       opacity: 1;
+    }
+}
+
+@keyframes slideRight{
+
+    0%{
+          transform: translateX(-100px);
+          opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+
+    0%{
+          transform: translateX(100px);
+          opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+
+    0%{
+          transform: translateY(-100px);
+          opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes oscillate {
+    0% {
+      transform: scale(1.08); /* Starting point */
+    }
+    
+  }
