@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Class Component with Props via CDN</title>
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+  <!-- React app root element -->
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // Create a child component that receives props
+    class ChildComponent extends React.Component {
+      render() {
+        return (
+          <div>
+            <h2>{this.props.message}</h2>
+          </div>
+        );
+      }
+    }
+
+    // Create a parent class component
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          message: "Hello from the parent component!"
+        };
+      }
+
+      render() {
+        return (
+          <div>
+            <h1>Welcome to the React Class Component</h1>
+            {/* Passing state as props to the child component */}
+            <ChildComponent message={this.state.message} />
+          </div>
+        );
+      }
+    }
+
+    // Render the parent component to the DOM
+    ReactDOM.render(<MyComponent />, document.getElementById('root'));
+  </script>
+</body>
+</html>

@@ -12,6 +12,12 @@ body {
 
 }
 
+main {
+    position: relative;
+}
+
+/* nav css */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -33,7 +39,7 @@ header nav ul {
 
 }
 
-.logo{
+.logo {
     animation: slideRight 1s ease forwards;
     opacity: 0;
 }
@@ -61,7 +67,7 @@ header nav ul li {
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s*var(--i));
-   
+
 }
 
 header nav ul li a {
@@ -70,7 +76,7 @@ header nav ul li a {
     line-height: 1.75rem;
     color: white;
     font-weight: 500;
-   
+
 }
 
 
@@ -102,11 +108,13 @@ nav button:hover {
     box-shadow: 0px 0px 10px cyan;
 }
 
+/* banner section css */
+
 .banner {
-   
+
     padding: 10px;
- 
-   
+
+
 }
 
 .banner-container {
@@ -118,7 +126,7 @@ nav button:hover {
     align-items: center;
     gap: 130px;
     margin-top: 40px;
-    
+
 }
 
 .banner-container .text {
@@ -159,45 +167,46 @@ nav button:hover {
 
 }
 
-.text-btn{
+.text-btn {
     margin-top: 18px;
 }
 
-.social a{
+.social a {
     opacity: 0;
-    animation: slideLeft  1s ease forwards;
-    
-    animation-delay:calc(0.2s*var(--i));
-}
-.text-btn button{
-     padding:10px 15px 10px 15px;
-     background: cyan;
-     font-size: 15px;
-     border-radius: 28px;
-     border: none;
-     font-weight: 500;
-     opacity: 0;
-     animation: slideTop 1s ease forwards;
-     animation-delay: 2s;
+    animation: slideLeft 1s ease forwards;
+
+    animation-delay: calc(0.2s*var(--i));
 }
 
-.text-btn button:hover{
-    box-shadow: 0px 0px 10px cyan,0px 0px 25px cyan, 0px 0px 50px cyan;
+.text-btn button {
+    padding: 10px 15px 10px 15px;
+    background: cyan;
+    font-size: 15px;
+    border-radius: 28px;
+    border: none;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 
-.text h3{
+.text-btn button:hover {
+    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan, 0px 0px 50px cyan;
+}
+
+.text h3 {
     font-size: 20px;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
 }
 
-.text h1{
+.text h1 {
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
     opacity: 0;
 }
 
-.text p{
+.text p {
 
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
@@ -207,22 +216,22 @@ nav button:hover {
 
 /* About me section css */
 
-#about-me{
-      margin-top: 100px;
+#about-me {
+    margin-top: 100px;
 }
 
-.about-container{
-     width:80%;
-     margin: auto;
-     display: flex;
-     flex-wrap:wrap-reverse;
-     justify-content: center;
-     align-items:center;
-    
-     gap:10rem;
+.about-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10rem;
 }
 
-.about-photo-container{
+.about-photo-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +240,8 @@ nav button:hover {
     transition: 0.3s;
     animation: slideRight 1s ease forwards;
 }
-.about-container .about-photo{
+
+.about-container .about-photo {
 
     width: 250px;
     height: 250px;
@@ -241,16 +251,16 @@ nav button:hover {
     border-bottom: 8px solid blueviolet;
     border-top: 8px solid blueviolet;
     box-shadow: 5px 0px 50px cyan;
-        
+
     background-image: url('./Images/photo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+
 }
 
-.about-btn button{
-    padding:10px 15px 10px 15px;
+.about-btn button {
+    padding: 10px 15px 10px 15px;
     background: cyan;
     font-size: 15px;
     border-radius: 28px;
@@ -261,65 +271,66 @@ nav button:hover {
     animation-delay: .3s;
 }
 
-.about-btn button:hover{
-    box-shadow: 0px 0px 10px cyan,0px 0px 25px cyan, 0px 0px 50px cyan;
+.about-btn button:hover {
+    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan, 0px 0px 50px cyan;
 }
 
-.about-text{
-      
-      width:55%;
-      color: white;
-      opacity: 0;
+.about-text {
+
+    width: 55%;
+    color: white;
+    opacity: 0;
     transition: 0.3s;
     animation: slideLeft 1s ease forwards;
 }
 
 
 
-/* serice css */
+/*my service section css */
 
-#services{
+#services {
     margin-top: 100px;
 }
 
-.service-container{
+.service-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap:30px;
+    gap: 30px;
 }
 
-.service-container .service-card{
-    width:330px;
+.service-container .service-card {
+    width: 330px;
     border-radius: 6px;
-    color:white;
+    color: white;
     text-align: left;
     border: none;
     padding: 16px;
     box-shadow: 0px 0px 20px blue;
     transition: transform 0.3s ease-in-out, opacity 1s ease;
-    transform: translateX(10px); 
+    transform: translateX(10px);
     /* opacity: 0;
     animation: slideLeft 1s ease forwards; 
     animation-delay: calc(0.3s*var(--i));
    */
 }
 
-.service-card i{
-     font-size: 34px;
-     color:cyan;
+.service-card i {
+    font-size: 34px;
+    color: cyan;
 }
 
- .service-card:hover{
-    transform: scale(1.08) !important; /* Combine translation and scale */
+.service-card:hover {
+    transform: scale(1.08) !important;
+    /* Combine translation and scale */
     transition: 1s !important;
     cursor: pointer;
 
- }
+}
 
 
- .service-card div button{
+.service-card div button {
 
     padding: 10px;
     background: cyan;
@@ -329,38 +340,44 @@ nav button:hover {
     font-weight: 500;
 }
 
-.service-card div button:hover{
-     box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan , 0px 0px 20px cyan;
+.service-card div button:hover {
+    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan, 0px 0px 20px cyan;
 }
 
-#skill{
+
+
+/* skill section css */
+
+#skill {
     margin-top: 70px;
 }
-.skill-container{
+
+.skill-container {
 
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin:auto;
+    margin: auto;
 
 }
 
-.skill-sub{
+.skill-sub {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
-    gap: 10px; 
-    width:50%;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 equal-width columns */
+    gap: 10px;
+    width: 50%;
     transition: 0.3s;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
 }
 
-.skill-sub div{
-     display: flex;
-     justify-content: center;
-     align-items: center;
+.skill-sub div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 200;
     padding: 5px;
     border-radius: 25px;
@@ -373,27 +390,26 @@ nav button:hover {
 
 
 }
-.skill-sub div i{
+
+.skill-sub div i {
 
     color: black;
     font-size: 23px;
     font-weight: 500;
 }
 
-.skill-sub div:hover{
-   
-  
-    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan,0px 0px 50px cyan;
+.skill-sub div:hover {
+
+
+    box-shadow: 0px 0px 10px cyan, 0px 0px 25px cyan, 0px 0px 50px cyan;
     cursor: pointer;
-   
+
     transition: 0.3s;
 
 }
 
-.text-skill{
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
+.text-skill {
+
     width: 450px;
     color: white;
     transition: 0.3s;
@@ -401,11 +417,390 @@ nav button:hover {
     animation: slideRight 1s ease forwards;
 }
 
-.text-skill img{
+.text-skill img {
 
-    width:150px;
-    display:block;
+    width: 150px;
+    display: block;
 
+}
+
+/* project section css */
+
+.works {
+    text-align: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0.2em 0.5em;
+    border: 2px solid #1788ae;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    font-size: 2em;
+    background-color: var(--light);
+    position: relative;
+    z-index: 5;
+    color: #1788ae;
+
+}
+
+#project {
+    position: relative;
+    margin: 0 auto;
+}
+
+#project .project {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    max-width: 1600px;
+    margin-bottom: 3em;
+}
+
+.vertical-line {
+    width: 2px;
+    position: absolute;
+    top: 50px;
+    bottom: -5em;
+    background: #1788ae;
+    opacity: 0.5;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 0;
+}
+
+
+
+.project .project-img .project-img-wrapper {
+
+    max-width: 400px;
+    /* width: 100%; */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+    position: relative;
+}
+
+.project-img-wrapper:hover {
+
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+
+
+.project .project-img img {
+
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+.visit-site {
+    display: none;
+    background: #2694d4;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: -16%;
+    left: 35%;
+    transition: 0.3s;
+    width: max-content;
+
+
+}
+
+.show-btn {
+    display: flex;
+    animation: slideBtn 1s ease-in-out;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+}
+
+
+
+.change-background {
+    background: transparent;
+
+
+}
+
+
+
+.project-img {
+    /* display: flex; */
+    position: relative;
+    z-index: 4;
+}
+
+
+.project-details {
+    width: 48%;
+    color: white
+}
+
+.project-details h3 {
+    font-size: 2em;
+    color: blueviolet;
+}
+
+.project1 .project-details h3 {
+    color: #DB2777;
+}
+
+.project2 .project-details h3 {
+
+    color: burlywood;
+}
+
+.project-details span {
+    color: blueviolet;
+}
+
+.project1 .project-details span {
+    color: #DB2777;
+}
+
+.project-details div ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-left: -40px;
+}
+
+
+.project-details ul li {
+
+    border: 1px solid #ddd;
+    padding: 0.4em 0.8em;
+    border-radius: 50px;
+    margin-bottom: 0.5em;
+
+    list-style: none;
+
+}
+
+.circle-dot {
+
+    width: 15px;
+    height: 15px;
+    /* background-color: var(--dark); */
+    background-color: rgb(241, 238, 243);
+    border: 3px solid #2694d4;
+    position: absolute;
+    border-radius: 50%;
+    top: 48.1%;
+    left: 49.5%;
+    z-index: 5;
+
+    /* border:blue; */
+}
+
+.project0 .circle-dot {
+    border-color: blueviolet;
+
+}
+
+
+.project1 .circle-dot {
+    border-color: #DB2777;
+}
+
+
+.project2 .circle-dot {
+    border-color: burlywood;
+}
+
+.project3 .circle-dot {
+    border-color: green;
+}
+
+.circle-extension {
+
+    width: 35%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 1;
+}
+
+.project0 .circle-extension {
+    background-color: blueviolet;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+.project1 .circle-extension {
+    -webkit-transform: translate(100%, -50%);
+    transform: translate(0%, -50%);
+    background-color: #DB2777;
+}
+
+.project2 .circle-extension {
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate((-100%, -50%));
+    background-color: burlywood;
+}
+
+.project3 .circle-extension {
+    background-color: green;
+}
+
+/* contact me section css */
+
+.contact-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* gap:140px; */
+    margin: 20px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.contact-container .contact-img {
+    width: 50%;
+    animation: slideRight 1s ease forwards;
+}
+
+.contact-container .contact-img img {
+    width: 100%;
+}
+
+.contact-container .contact-form {
+    width: 45%;
+    animation: slideLeft 1s ease forwards;
+}
+
+.contact-container .contact-form form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 5px;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container .contact-form form .contact-main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.contact-container .contact-form form .name input {
+    /* display: block; */
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 4px solid #081C29;
+
+}
+
+.contact-container .contact-form form .name {
+
+    width: 50%;
+}
+
+.contact-container .contact-form form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 4px solid #081C29;
+    outline: #081C29;
+}
+
+.contact-container .contact-form form textarea {
+
+    min-height: 150px;
+    outline: #081C29;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.contact-container .contact-form form button {
+
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #1788ae;
+    color: white;
+    font-size: 18px;
+}
+
+
+.top-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+}
+
+.top-btn button {
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2694d4;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-btn button i {
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.contact-form form .error {
+    color: red;
+    display: block;
+
+
+}
+
+/* contact form message display */
+.successMessage {
+    color: green;
+    display: block;
+    margin: auto;
+}
+
+/* footer section */
+.footer-section {
+    padding: 20px;
+    background: #04112C;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
 }
 
 
@@ -414,24 +809,28 @@ nav button:hover {
 @media (max-width:768px) {
     nav {
         width: 100%;
+
     }
 
-   header nav ul {
-        /* display: none; */
+    header nav ul {
+
         flex-direction: column;
 
         width: 100%;
         position: absolute;
         top: 54px;
-        left: 0px;
+        left: 4px;
         gap: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+
+        margin-top: 30px;
         background-color: white;
         z-index: 10;
         /* height: 100vh; */
-        transition: 1s;
-        opacity: 0;
+        /* display: block; */
+        max-height: 0;
+
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
 
     }
 
@@ -439,9 +838,16 @@ nav button:hover {
         color: black;
     }
 
+    header nav ul li {
+
+        margin-top: 10px;
+
+    }
+
     .download-btn {
         display: flex;
         width: 120px;
+        margin-bottom: 50px;
     }
 
     header nav button {
@@ -449,20 +855,15 @@ nav button:hover {
     }
 
     .hamburger {
-        display: flex;
-        flex-direction: column;
+        display: block;
         cursor: pointer;
         color: white;
     }
 
-    .nav-links.active{
+    .nav-links.active {
 
-        /* transform: translateY(0); */
-        /* display: flex;  */
-        /* transition: 1s; */
-        opacity: 1;
-        transition: 1s;
-        
+        max-height: 1000px;
+        transition: max-height .5s ease-in-out;
     }
 
     .hamburger .bar {
@@ -470,121 +871,213 @@ nav button:hover {
         height: 3px;
         background-color: white;
         margin: 4px 0;
-        margin-right: 10px;
+        margin-left: 70px;
+
     }
 
 
-    .banner-container .text{
+    .banner-container .text {
         width: 100%;
     }
 
-    .banner-container .photo .photo-outlier{
-          width: 200px;
-          height: 200px;
-          margin: auto;
+    .banner-container .photo .photo-outlier {
+        width: 200px;
+        height: 200px;
+        margin: auto;
     }
 
-    .banner-container{
-        gap:28px;
+    .banner-container {
+        gap: 28px;
     }
 
-    .text-btn{
-        margin:20px auto;
+    .text-btn {
+        margin: 20px auto;
     }
 
-     .about-container{
+    .about-container {
         width: 100%;
         margin-top: 10px;
-        gap:10px;
-     }
-    .about-container .about-photo-container{
-           width:100%;
-           
+        gap: 10px;
     }
 
-    .about-container .about-photo{
+    .about-container .about-photo-container {
+        width: 100%;
+
+    }
+
+    .about-container .about-photo {
         width: 200px;
         height: 200px;
     }
 
-    .about-container .about-text{
+    .about-container .about-text {
         width: 80%;
     }
 
-    #about-me{
+    #about-me {
         margin-top: -50px;
     }
 
-    #services{
+    #services {
 
         padding: 20px;
         width: 100%;
         margin-top: 0px;
     }
 
-    .skill-sub{
+    .skill-sub {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 4 equal-width columns */
+        grid-template-columns: repeat(2, 1fr);
+        /* 4 equal-width columns */
         /* gap: 10px;  */
-        width:100%;
+        width: 100%;
         /* margin: auto; */
         padding: 5px;
-        
-       
+        margin: auto;
+        justify-content: center;
+
+
     }
 
-    .skill-sub div{
+    .skill-sub div {
 
         width: 170px;
         padding: 5px;
     }
 
+    .text-skill img {
+
+        width: 80%;
+        display: block;
+        margin: auto;
+
+    }
+
+    .text-skill {
+        width: 100%;
+        margin: auto;
+        /* padding: 10px; */
+    }
+
+
+    .vertical-line {
+        display: none;
+    }
+
+    .project {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    .project2 {
+        flex-wrap: wrap-reverse;
+    }
+
+    .project0 {
+        flex-wrap: wrap-reverse;
+    }
+
+    .project .project-img {
+        width: 100%;
+    }
+
+    .project .project-details {
+        width: 100% !important;
+
+    }
+
+    .project .circle-extension {
+        display: none;
+    }
+
+    .project .circle-dot {
+        display: none;
+    }
+
+   .contact-container  .contact-main{
+     flex-direction: column;
+     width: 100%;
+   }
+
+   .contact-main .name{
+       width: 100%!important;
+   }
+   .contact-main .name input{
+         width: 100%!important;
+   }
+
+    .contact-container {
+        width: 100%!important;
+    }
+
+    .contact-container .contact-img {
+        width: 100%;
+    }
+
+    .contact-container .contact-img img {
+        width: 100%;
+    }
+
+    .contact-container .contact-form {
+        width: 100%;
+    }
+
+    .contact-container .contact-form form {
+        width: 100%;
+    }
+
 }
 
-@keyframes slideTop{
+@keyframes slideTop {
 
-    0%{
-       transform: translateY(100px);
-       opacity: 0;
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
     }
 
-    100%{
-       transform: translateY(0px);
-       opacity: 1;
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 
-@keyframes slideRight{
+@keyframes slideRight {
 
-    0%{
-          transform: translateX(-100px);
-          opacity: 0;
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideLeft{
+@keyframes slideLeft {
 
-    0%{
-          transform: translateX(100px);
-          opacity: 0;
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideBottom{
+@keyframes slideBottom {
 
-    0%{
-          transform: translateY(-100px);
-          opacity: 0;
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
@@ -592,7 +1085,23 @@ nav button:hover {
 
 @keyframes oscillate {
     0% {
-      transform: scale(1.08); /* Starting point */
+        transform: scale(1.08);
+        /* Starting point */
     }
-    
-  }
+
+}
+
+
+@keyframes slideBtn {
+
+    0% {
+        transform: translateY(20px);
+        transition: all;
+    }
+
+    100% {
+        transform: translateY(0px);
+        transition: all;
+        opacity: 1;
+    }
+}
