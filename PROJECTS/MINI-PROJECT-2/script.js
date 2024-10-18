@@ -112,7 +112,7 @@ contactForm.addEventListener("submit", (e) => {
    document.querySelector(".lastname-error").innerHTML = "";
    document.querySelector(".email-error").innerHTML = "";
    document.querySelector(".msg-error").innerHTML = "";
-   document.querySelector(".subject").innerHTML = "";
+   document.querySelector(".subject-error").innerHTML = "";
 
    // Get values from form inputs
    const firstName = document.getElementById("firstname").value.trim();

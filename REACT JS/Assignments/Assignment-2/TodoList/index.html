@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial                                                      -scale=1.0">
+    <title>React Component with Props via CDN</title>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <style>
+        .App {
+            text-align: center;
+            margin-top: 50px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+
+
+        .todo-list {
+            margin-top: 20px;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+            
+        }
+
+        .todo-item span {
+            cursor: pointer;
+        }
+
+        .todo-item button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+
+        .Pending {
+            color:green;
+        }
+
+
+        form input{
+            padding: 8px;
+            outline: none;
+            margin-right: 10px;
+            width: 300px;
+        }
+
+        form button{
+            padding: 10px;
+            background: green;
+            border-radius: 4px;
+            border: none;
+            color:white;
+            width: 310px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <!-- React app root element -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Create a child component that receives props
+        const { useState } = React;
+
+
+        const TodoItem = ({ task, index, toggleComplete, deleteTask }) => {
+            return (
+                <div draggable='true' className={`todo-item ${task.isCompleted ? 'Pending' : 'Done'}`}>
+                    <span
+                        onClick={() => toggleComplete(index)}
+                        style={{ textDecoration: task.isCompleted ? 'line-through' : '' }}
+                    >
+                        {task.text}
+                        {task.isCompleted}
+                    </span>
+                    <button onClick={() => deleteTask(index)}>Delete</button>
+                    <span
+                        onClick={() => toggleComplete(index)}
+                        style={{ textDecoration: task.isCompleted ? 'pending' : '' }}
+                    >
+                        
+                      {task.isCompleted ?'pending':'Done'} 
+                    </span>
+                </div>
+            );
+        };
+
+
+
+
+        const TodoApp = () => {
+            const [task, setTask] = useState('');
+            const [tasks, setTasks] = useState([]);
+
+            const addTask = (e) => {
+                e.preventDefault();
+                if (task.trim() !== '') {
+                    setTasks([...tasks, { text: task, isCompleted: false }]);
+                    setTask('');
+                }
+            };
+
+            const toggleComplete = (index) => {
+                const newTasks = [...tasks];
+                newTasks[index].isCompleted = !newTasks[index].isCompleted;
+                setTasks(newTasks);
+            };
+
+            const deleteTask = (index) => {
+                const newTasks = [...tasks];
+                newTasks.splice(index, 1);
+                setTasks(newTasks);
+            };
+
+            return (
+                <div className="App">
+                    <h1>To-Do List</h1>
+                    <form onSubmit={addTask}>
+                        <input
+                            type="text"
+                            placeholder="Add a new task"
+                            value={task}
+                            onChange={(e) => setTask(e.target.value)}
+                        />
+                        <button type="submit">Add</button>
+                    </form>
+
+                    <div className="todo-list">
+                        {tasks.map((task, index) => (
+                            <TodoItem
+                                key={index}
+                                task={task}
+                                index={index}
+                                toggleComplete={toggleComplete}
+                                deleteTask={deleteTask}
+                            />
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+
+
+        ReactDOM.render(<TodoApp />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

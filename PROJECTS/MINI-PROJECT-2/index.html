@@ -20,9 +20,9 @@
 
 
     <style>
-
-.loading {
-            display: none; /* Hide loader by default */
+        .loading {
+            display: none;
+            /* Hide loader by default */
             border: 2px solid white;
             border-radius: 50%;
             border-top-color: transparent;
@@ -32,7 +32,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .loading-button {
@@ -45,6 +47,7 @@
         .loading-button:disabled {
             cursor: not-allowed;
         }
+
         .visit-site::after {
             content: '';
             position: absolute;
@@ -116,9 +119,11 @@
                 <li style="--i:4"><a class="skill" value="skill" href="#skill">Skills</a></li>
                 <li style="--i:5"><a class="myproject" value="project" href="#latest-works">Projects</a></li>
                 <li style="--i:6"><a class="service" value="service" href="#service-start">Services</a></li>
-                <a href="https://drive.google.com/file/d/1TAeQJ04uu9aV-QF5RMGVgACo-UZFJeSH/view?usp=sharing" style="font-style: none;" target="_blank"><button class="download-btn">Download CV</button></a>
+                <a href="https://drive.google.com/file/d/1TAeQJ04uu9aV-QF5RMGVgACo-UZFJeSH/view?usp=sharing"
+                    style="font-style: none;" target="_blank"><button class="download-btn">Download CV</button></a>
             </ul>
-            <a href="https://drive.google.com/file/d/1TAeQJ04uu9aV-QF5RMGVgACo-UZFJeSH/view?usp=sharing" target="_blank" style="font-style: none;"><button>Download CV</button></a>
+            <a href="https://drive.google.com/file/d/1TAeQJ04uu9aV-QF5RMGVgACo-UZFJeSH/view?usp=sharing" target="_blank"
+                style="font-style: none;"><button>Download CV</button></a>
             <div class="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -152,7 +157,7 @@
                                 <a style="--i:10" href="#"><i class="bx bxl-twitter text-cyan"></i></a>
                             </div>
                             <div class="text-btn">
-                                <a href="#about-me"><button >More About Me</button></a>
+                                <a href="#about-me"><button>More About Me</button></a>
                             </div>
                 </div>
                 <div class="photo">
@@ -355,22 +360,28 @@
                 </div>
                 <div class="project-details">
                     <h3>Indian Tourism Wonder Of Bharat</h3>
-                    <a href="https://github.com/israrhusain5892/Tourism-and-Travel-Management-System.git" target="_blank" class="github-btn">
+                    <a href="https://github.com/israrhusain5892/Tourism-and-Travel-Management-System.git"
+                        target="_blank" class="github-btn">
                         <button
                             style="background: blueviolet; padding: 10px; color: white; border-radius: 5px; border:none;">Github
                             <i class='bx bx-link-external'></i>
                         </button>
                     </a>
                     <p>
-                        Wonder of Bharat is a tourism site. This tourism website can offer key functionalities to provide a seamless and enriching experience for travelers. It  include destination pages with detailed information, high-quality images, and local insights. Users can search and filter destinations or tours based on preferences like location, activity type, budget, and duration. Booking and reservation systems are integrated with hotels, and tour providers, with secure payment options. Built the complete site from scratch.
+                        Wonder of Bharat is a tourism site. This tourism website can offer key functionalities to
+                        provide a seamless and enriching experience for travelers. It include destination pages with
+                        detailed information, high-quality images, and local insights. Users can search and filter
+                        destinations or tours based on preferences like location, activity type, budget, and duration.
+                        Booking and reservation systems are integrated with hotels, and tour providers, with secure
+                        payment options. Built the complete site from scratch.
                     </p>
                     <div>
                         <ul>
                             <li>#react.js</li>
                             <li>#vite.js</li>
-                             <li>#spring boot</li>
-                             <li>#Jpa Hibernate</li>
-                             <li>#Mysql</li>
+                            <li>#spring boot</li>
+                            <li>#Jpa Hibernate</li>
+                            <li>#Mysql</li>
                             <li>#css</li>
                             <li>#javascript</li>
                             <li>#figma</li>
@@ -505,7 +516,10 @@
                         </button>
                     </a>
                     <p>
-                        Customer Relationship Manager web application is widely used by managers to store, retrieve and modify their customers' information. This project is the implementation of a backend web application where we can create, read, update and delete (CRUD) customer information. Built the complete site from
+                        Customer Relationship Manager web application is widely used by managers to store, retrieve and
+                        modify their customers' information. This project is the implementation of a backend web
+                        application where we can create, read, update and delete (CRUD) customer information. Built the
+                        complete site from
                         scratch.
                     </p>
                     <div>
@@ -549,56 +563,59 @@
                 <div class="circle-extension"></div>
             </div>
 
-          
+
 
             <div class="vertical-line"></div>
         </section>
-        <h1 style="text-align: center; width: 300px; margin: auto; font-size: 34px; color: white; margin-top: 80px; border: 2px solid #1788ae;;">
+        <h1
+            style="text-align: center; width: 300px; margin: auto; font-size: 34px; color: white; margin-top: 80px; border: 2px solid #1788ae;;">
             Contact <span style="color:cyan">Me</span></h1>
-          <section id="contact-me">
-              <div class="contact-container">
-                    <div class="contact-img">
-                        <img src="./Images/contact-me.svg" alt="contact-img"/>
-                    </div>
-                    <div class="contact-form">
-                          <form id="contactForm">
-                               <input type="text" id="subject" class="subject" placeholder="Enter your subject">
-                               <span class="subject-error error"></span>
-                              <div class="contact-main">
-                                <div class="name">
-                                    <input type="text" class="first-name" id="firstname" placeholder="Enter your first Name">
-                                    <span class="firstname-error error"></span>
-                                </div>
-                               
-                                  <div class="name">
-                                    
-                                  <input type="text" class="last-name" id="lastname" placeholder="Enter your Last Name">
-                                  <span class="lastname-error error"></span>
-                                  </div>
-                                 
-                
-                              </div>
-                               <input type="email" class="email" id="email" placeholder="Enter your email address">
-                               <span class="email-error error"></span>
-                               <textarea type="text" class="message" id="message" placeholder="enter your message here.."></textarea>
-                               <span class="msg-error error"></span>
-                               <span class="successMessage"></span>
-                               <button class="send-btn" type="submit">submit
-                                <span class="loading" id="loader"></span>
-                               </button>
-                          </form>
-                    </div>
-              </div>
-          </section>
-          <a href="#header" class="top-btn"><button>Top <i class='bx bxs-up-arrow-alt'></i></button></a>
+        <section id="contact-me">
+            <div class="contact-container">
+                <div class="contact-img">
+                    <img src="./Images/contact-me.svg" alt="contact-img" />
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" id="subject" class="subject" placeholder="Enter your subject">
+                        <span class="subject-error error"></span>
+                        <div class="contact-main">
+                            <div class="name">
+                                <input type="text" class="first-name" id="firstname"
+                                    placeholder="Enter your first Name">
+                                <span class="firstname-error error"></span>
+                            </div>
+
+                            <div class="name">
+
+                                <input type="text" class="last-name" id="lastname" placeholder="Enter your Last Name">
+                                <span class="lastname-error error"></span>
+                            </div>
+
+
+                        </div>
+                        <input type="email" class="email" id="email" placeholder="Enter your email address">
+                        <span class="email-error error"></span>
+                        <textarea type="text" class="message" id="message"
+                            placeholder="enter your message here.."></textarea>
+                        <span class="msg-error error"></span>
+                        <span class="successMessage"></span>
+                        <button class="send-btn" type="submit">submit
+                            <span class="loading" id="loader"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <a href="#header" class="top-btn"><button>Top <i class='bx bxs-up-arrow-alt'></i></button></a>
     </main>
-    
+
     <footer>
-         <div class="footer-section">© 2024 Israr Husain Portfolio. All Rights Reserved.</div>
+        <div class="footer-section">© 2024 Israr Husain Portfolio. All Rights Reserved.</div>
     </footer>
     <script src="script.js"></script>
-   
-   
+
+
 </body>
 
 </html>

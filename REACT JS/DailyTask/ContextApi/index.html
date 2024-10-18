@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use Context</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+         const CounterContext=React.createContext();
+        
+          function CounterProvider({children}){
+
+             const [count,setCount]=React.useState(0);
+
+             const increament=()=>{
+                 setCount(count+1);
+             }
+
+             const decreament=()=>{
+                setCount(count-1)
+             }
+
+             return(
+               
+                 <CounterContext.Provider value={{count,increament,decreament}}>
+                    {children}
+                 </CounterContext.Provider>
+             )
+         }
+//  cosumer
+   function CounterDisplay(){
+           const{count}=React.useContext(CounterContext);
+
+           return(
+               <h1>{count}</h1>
+           )
+   }
+
+   function CounterControls(){
+      const{increament,decreament}=React.useContext(CounterContext);
+      return (
+           <div>
+                <button onClick={increament}>increament</button>
+                <button onClick={decreament}>decreament</button>
+            </div>
+      )
+   }
+         function App(){
+            return(
+                <div style={{margin:'auto',width:'400px'}}>
+                <CounterProvider>
+                <div>
+                    <h1>counter app context api</h1>
+               </div>
+               <CounterDisplay/>
+               <CounterControls/>
+               </CounterProvider>
+               </div>
+            )
+         }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
